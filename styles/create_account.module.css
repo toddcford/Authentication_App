@@ -20,12 +20,12 @@
 
 .form {
   display: grid;
-  grid-template-rows: repeat(5, 3fr);
-  width: 300px;
+  grid-template-rows: repeat(6, 3fr);
+  width: 350px;
   
 }
 
-.rowone, .rowtwo, .rowthree, .rowfour, .submit_button {
+.rowone, .rowtwo, .rowthree, .rowfour, .rowfive, .submit_button {
   display: flex;
   justify-content: center;
   margin: 2% 0 2% 0;
@@ -39,7 +39,7 @@
 }
 
 .input:focus {
-  outline-color: #FE6B8B; 
+  outline-color: orange; 
 }
 
 .input_button {
@@ -79,4 +79,10 @@
 .create_acct_button:hover {
   background-color: orange;
   border: none;
+}
+
+.link {
+  text-align: center;
+  margin-top: 2em;
+  
 }

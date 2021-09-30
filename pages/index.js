@@ -26,7 +26,7 @@ const Home = () => {
   return (
   
     <div className={styles.wrapper}>
-      <h2 className={styles.title}> Hello! Please Enter Your Information:</h2>
+      <h2 className={styles.title}> Hello! Please Log in:</h2>
       <div className={styles.form_wrapper}>
       <form className={styles.form} action="/user/login" method="POST">
         <div className={styles.rowthree}>

@@ -19,7 +19,8 @@ router.post('/signup',
     }
 
     const {
-      name,
+      fname,
+      lname,
       username,
       email,
       password
@@ -31,7 +32,8 @@ router.post('/signup',
       }
       console.log("creating new user");
       user = new User2({
-        name,
+        fname,
+        lname,
         username,
         email,
         password
@@ -57,7 +59,7 @@ router.post('/signup',
           res.status(200).json({token});
         }
       );
-    res.redirect('/about?name=' + name + "&username=" + username + "&email=" + email + "&from=signup");
+    res.redirect('/home?fname=' + fname + "&lname=" + lname + "&username=" + username + "&email=" + email + "&from=signup");
     } catch (err) {
       console.log(err.message);
       res.status(500).send("Error in Saving...MONGO_URL_TEST: " + process.env.MONGO_URL_TEST);
@@ -114,7 +116,7 @@ router.post(
           });
         }
       );
-      res.redirect('/about?name=' + user.name + "&username=" + user.username + "&email=" + email + '&from=login');
+      res.redirect('/home?fname=' + user.fname + "&lname=" + user.lname + "&username=" + user.username + "&email=" + email + '&from=login');
     } catch(e) {
       console.error(e);
       res.status(500).json({
