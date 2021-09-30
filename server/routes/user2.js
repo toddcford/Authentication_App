@@ -60,7 +60,7 @@ router.post('/signup',
     res.redirect('/about?name=' + name + "&username=" + username + "&email=" + email + "&from=signup");
     } catch (err) {
       console.log(err.message);
-      res.status(500).send("Error in Saving...MONGO_URL: " + process.env.MONGO_URL);
+      res.status(500).send("Error in Saving...MONGO_URL_TEST: " + process.env.MONGO_URL_TEST);
     }
   }
 );
