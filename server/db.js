@@ -6,7 +6,7 @@ const MONGO_URL = process.env.MONGO_URL_TEST;
 console.log(MONGO_URL);
 
 const options = {
-  useNewUrlParser: true
+  useNewUrlParser: true,
 };
 
 const InitiateMongoServer = async () => {
