@@ -14,14 +14,13 @@
   display: grid;
   grid-template-columns: 1;
   justify-content: center;
-  /* border: 2px solid lightgrey; */
   border : 2px solid #e4c2c9;
   margin-top: 10%;
 }
 
 .form {
   display: grid;
-  grid-template-rows: repeat(3, 3fr);
+  grid-template-rows: repeat(5, 3fr);
   width: 300px;
   
 }
@@ -40,8 +39,7 @@
 }
 
 .input:focus {
-  /* outline-color: orange;  */
-  outline-color: #FF8E53
+  outline-color: #FE6B8B; 
 }
 
 .input_button {
@@ -78,14 +76,7 @@
   cursor: pointer;
 }
 
-.MuiButton-text {
-  background-color: white;
-  border: 1px solid black; 
-  line-height: 2;
-  cursor: pointer;
-}
-
-.MuiButton {
+.create_acct_button:hover {
   background-color: orange;
   border: none;
 }
