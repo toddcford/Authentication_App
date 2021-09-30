@@ -31,33 +31,33 @@ app.prepare().then(() => {
     app.render(req, res, req.path, { user } )
   })
 
-  function logOriginalUrl(req, res, next) {
-    console.log('Request URL: ', req.originalUrl);
-    next()
-  }
+  // function logOriginalUrl(req, res, next) {
+  //   console.log('Request URL: ', req.originalUrl);
+  //   next()
+  // }
 
-  function logMethod(req, res, next) {
-    console.log('Request Type: ', req.method)
-    next()
-  }
+  // function logMethod(req, res, next) {
+  //   console.log('Request Type: ', req.method)
+  //   next()
+  // }
 
-  var logStuff = [logOriginalUrl, logMethod]
+  // var logStuff = [logOriginalUrl, logMethod]
 
-  server.get('/user/:id', function (req, res, next) {
-    if (req.params.id  ==='0') next('route')
-    else next()
-  }, function (req, res, next) {
-    res.send('regular')
-  })
+  // server.get('/user/:id', function (req, res, next) {
+  //   if (req.params.id  ==='0') next('route')
+  //   else next()
+  // }, function (req, res, next) {
+  //   res.send('regular')
+  // })
 
-  server.get('/user/:id', logStuff, function(req, res, next) {
-    res.send('random');
-  })
+  // server.get('/user/:id', logStuff, function(req, res, next) {
+  //   res.send('random');
+  // })
 
-  server.get('/user/:id', function(req, res, next) {
+  // server.get('/user/:id', function(req, res, next) {
 
-    res.send('special');
-  })
+  //   res.send('special');
+  // })
 
   server.use('/user', user2)
 
